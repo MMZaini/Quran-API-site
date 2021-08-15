@@ -1,12 +1,13 @@
 p {
   text-align: center;
-  font-size: 22px;
+  font-size: 26px;
   font-family: Helvetica;
 }
 
 .title {
-  font-size: 40px;
+  font-size: 45px;
   font-family: Verdana;
+  font-weight: bold;
 }
 
 .box {
