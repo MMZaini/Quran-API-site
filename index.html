@@ -11,11 +11,13 @@
 
 <body>
 	<h1 class="title" style="text-align:center;">Quran</h1>
-	<div style="text-align:center;">
-  <label for="verse">Verse:</label>
-  <input class="form-control" type="text" id="verse" value="1:1" name="verse">
-	<button class="btn btn-primary" onclick="updateVerse()">Search</button>
+  <div class="input-group mb-3 text-center center-block box">
+  <input type="text" class="form-control" id="verse" value="1:1" name="verse" placeholder="1:1" aria-label="Example text with button addon" aria-describedby="button-addon1">
+  <br>
+  <button class="btn btn-outline-secondary" type="button" id="button-addon1" onclick="updateVerse()">Search</button>
   </div>
+
+  <br>
   <p id="result"></p>
 	<script src="script.js">
 	</script>

@@ -8,3 +8,7 @@ p {
   font-size: 40px;
   font-family: Verdana;
 }
+
+.box {
+  margin: 5rem;
+}
