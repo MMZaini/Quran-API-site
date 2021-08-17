@@ -1,7 +1,5 @@
 // A verse from the quran in the format surah:ayah (uthmanic codex order)
 // The url for the array with the verse specified by the user
-error = "undefined"
-
 async function updateVerse() {
   arUpdateVerse()
   // get the verse the user has input
@@ -13,7 +11,9 @@ async function updateVerse() {
   let response = await fetch(url);
   let data = await response.json()
   let verseText = data.data.text
-  let theVerse = surahAyah + ": " + verseText;
+  let surahData = data.data.surah.number
+  let ayahData = data.data.numberInSurah
+  let theVerse = surahData + ":" + ayahData + ": " + verseText;
 
   // title in english and arabic
   let englishname = data.data.surah.englishName
@@ -24,9 +24,6 @@ async function updateVerse() {
   // put the resulting verse on the website
   if (typeof verseText != "undefined") {
     document.getElementById("result").innerHTML = theVerse;
-  }
-  if (typeof verseText == "undefined") {
-    document.getElementById("result").innerHTML = "This verse does not exist!";
   }
 }
 
@@ -39,12 +36,18 @@ async function arUpdateVerse() {
   let arResponse = await fetch(arUrl);
   let arData = await arResponse.json()
   let arVerseText = arData.data.text
-  let arTheVerse = arVerseText + " :" + arSurahAyah;
+  let arSurahData = arData.data.surah.number
+  let arAyahData = arData.data.numberInSurah
+  let arTheVerse = arSurahData + ":" + arAyahData + ": " + arVerseText;
+
   // put the resulting verse on the website
   if (typeof arVerseText != "undefined") {
     document.getElementById("arResult").innerHTML = arTheVerse;
   }
   if (typeof arVerseText == "undefined") {
-    document.getElementById("arResult").innerHTML = "هذه الآية غير موجودة!";
+    document.getElementById("arResult").innerHTML = "!هذه الآية غير موجودة";  
+  if (typeof verseText == "undefined") {
+    document.getElementById("result").innerHTML = "This verse does not exist!";
+  }
   }
 }
