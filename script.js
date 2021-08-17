@@ -15,6 +15,12 @@ async function updateVerse() {
   let verseText = data.data.text
   let theVerse = surahAyah + ": " + verseText;
 
+  // title in english and arabic
+  let englishname = data.data.surah.englishName
+  let arabicname = data.data.surah.name
+  document.getElementById("engname").innerHTML = "Surah " + englishname + ": "
+  document.getElementById("araname").innerHTML = " :" + arabicname
+
   // put the resulting verse on the website
   if (typeof verseText != "undefined") {
     document.getElementById("result").innerHTML = theVerse;
