@@ -45,10 +45,10 @@ async function arUpdateVerse() {
     document.getElementById("arResult").innerHTML = arTheVerse;
   }
   if (typeof arVerseText == "undefined") {
-    document.getElementById("arResult").innerHTML = "!هذه الآية غير موجودة";  
-  if (typeof verseText == "undefined") {
-    document.getElementById("result").innerHTML = "This verse does not exist!";
-  }
+    document.getElementById("arResult").innerHTML = "!هذه الآية غير موجودة";
+    if (typeof verseText == "undefined") {
+      document.getElementById("result").innerHTML = "This verse does not exist!";
+    }
   }
 }
 
