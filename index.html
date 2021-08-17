@@ -1,35 +1,31 @@
- <!DOCTYPE html>
- <html>
+<!DOCTYPE html>
+<html>
 
-   <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width">
-     <title>Quran</title>
-     <link rel="icon" type="image/png" href="favicon.png" />
-     <link href="style.css" rel="stylesheet" type="text/css" />
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-   </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Quran</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
 
-   <body>
-     <h1 class="title" style="text-align:center;">Quran</h1>
-     <div class="input-group mb-3 text-center center-block box">
-       <input type="text" class="form-control" id="verse" value="1:1" name="verse" placeholder="1:1" aria-label="Example text with button addon" aria-describedby="button-addon1">
-       <br>
-       <br>
-       <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="updateVerse()">Search</button>
-     </div>
-     <br>
-     <b>
-       <p style="font-size:33px" id="engname"></p>
-     </b>
-     <p id="result"></p>
-     <br>
-     <b>
-       <p style="font-size:33px" id="araname"></p>
-     </b>
-     <p id="arResult"></p>
-     <script src="script.js">
-     </script>
-   </body>
+  <body>
+    <h1 class="title" style="text-align:center;">Quran</h1>
+    <div class="input-group mb-3 text-center center-block box">
+      <input type="text" class="form-control" id="verse" value="1:1" name="verse" placeholder="1:1" aria-label="Example text with button addon" aria-describedby="button-addon1">
+      <br>
+      <br>
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="updateVerse()">Search</button>
+    </div>
+    <br>
+    <h1 style="font-size:33px;font-weight:bold" id="engname"></h1>
+    <p id="result"></p>
+    <br>
+    <h1 style="font-size:33px;font-weight:bold" id="araname"></h1>
+    <p style="font-size:28px" id="arResult"></p>
+    <script src="script.js">
+    </script>
+  </body>
 
- </html>
+</html>
