@@ -11,6 +11,7 @@ async function updateVerse() {
   let response = await fetch(url);
   let data = await response.json()
   let verseText = data.data.text
+  let quranNumber = data.data.number
   let surahData = data.data.surah.number
   let ayahData = data.data.numberInSurah
   let theVerse = surahData + ":" + ayahData + ": " + verseText;
