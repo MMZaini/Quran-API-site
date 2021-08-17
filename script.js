@@ -39,7 +39,7 @@ async function arUpdateVerse() {
   let arResponse = await fetch(arUrl);
   let arData = await arResponse.json()
   let arVerseText = arData.data.text
-  let arTheVerse = arSurahAyah + ": " + arVerseText;
+  let arTheVerse = arVerseText + " :" + arSurahAyah;
   // put the resulting verse on the website
   if (typeof arVerseText != "undefined") {
     document.getElementById("arResult").innerHTML = arTheVerse;
