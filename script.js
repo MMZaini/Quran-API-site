@@ -17,8 +17,8 @@ async function updateVerse() {
 
   // title in english and arabic
   let englishname = data.data.surah.englishName
-  let arabicname = data.data.surah.name
   document.getElementById("engname").innerHTML = "Surah " + englishname + ": "
+  let arabicname = data.data.surah.name
   document.getElementById("araname").innerHTML = " :" + arabicname
 
   // put the resulting verse on the website

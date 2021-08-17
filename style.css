@@ -13,3 +13,7 @@ p {
 .box {
   width: 40%;
 }
+
+.pad {
+  padding: 10px
+}
