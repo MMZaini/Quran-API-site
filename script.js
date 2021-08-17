@@ -51,3 +51,5 @@ async function arUpdateVerse() {
   }
   }
 }
+
+updateVerse() // to put 1:1 when page is launched
