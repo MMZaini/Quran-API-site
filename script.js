@@ -1,6 +1,8 @@
 // A verse from the quran in the format surah:ayah (uthmanic codex order)
 // The url for the array with the verse specified by the user
+
 async function updateVerse() {
+  // run the arabic verse function
   arUpdateVerse()
   // get the verse the user has input
   let surahAyah = document.getElementById("verse").value
@@ -54,3 +56,17 @@ async function arUpdateVerse() {
 }
 
 updateVerse() // to put 1:1 when page is launched
+
+async function nextAyah() {
+  let surahAyah = document.getElementById("verse").value
+  let url = "https://api.alquran.cloud/v1/ayah/" + surahAyah + "/en.asad"
+  let response = await fetch(url);
+  let data = await response.json()
+  let quranNumber = data.data.number
+  quranNumber = quranNumber + 1
+  surahAyah = quranNumber
+  console.log(quranNumber)
+  document.getElementById("verse").value = quranNumber
+  updateVerse()
+  arUpdateVerse()
+}
