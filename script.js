@@ -70,3 +70,17 @@ async function nextAyah() {
   updateVerse()
   arUpdateVerse()
 }
+
+async function previousAyah() {
+  let surahAyah = document.getElementById("verse").value
+  let url = "https://api.alquran.cloud/v1/ayah/" + surahAyah + "/en.asad"
+  let response = await fetch(url);
+  let data = await response.json()
+  let quranNumber = data.data.number
+  quranNumber = quranNumber - 1
+  surahAyah = quranNumber
+  console.log(quranNumber)
+  document.getElementById("verse").value = quranNumber
+  updateVerse()
+  arUpdateVerse()
+}
